@@ -4,7 +4,7 @@ android {
     compileSdkVersion 26
     buildToolsVersion "28.0.3"
     defaultConfig {
-        applicationId "com.example.databasetest"
+        applicationId "com.example.litepaltest"
         minSdkVersion 15
         targetSdkVersion 26
         versionCode 1
@@ -26,5 +26,5 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:26.0.0-alpha1'
     testCompile 'junit:junit:4.12'
-    compile 'org.litepal.android:core:3.0.0'
+    compile 'org.litepal.android:core:1.4.1'
 }
