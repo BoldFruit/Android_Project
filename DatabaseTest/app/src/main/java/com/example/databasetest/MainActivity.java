@@ -30,8 +30,18 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 SQLiteDatabase db = dbHelper.getWritableDatabase();
-                db.execSQL("insert into Book (name, author, pages, price) values(?,?,?,?)",new String[]{"The Da Vinci Code","Dan Brown", "454", "16.96"});
-                Toast.makeText(MainActivity.this, "successed", Toast.LENGTH_SHORT).show();
+                ContentValues values  = new ContentValues();
+                values.put("name","The Da Vinci Code");
+                values.put("author", "Dan Brown");
+                values.put("pages",454);
+                values.put("price", 16.96);
+                db.insert("Book",null,values);
+                values.clear();
+                values.put("name", "The Lost Symbol");
+                values.put("author","Dan Brown");
+                values.put("pages",510);
+                values.put("price",19.95);
+                db.insert("Book", null, values);
             }
         });
         Button updateData = (Button) findViewById(R.id.update_data);
@@ -49,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 SQLiteDatabase db = dbHelper.getWritableDatabase();
-                db.delete("Book", "pages > ?", new String[]{"500"});
+                db.delete("Book", "pages > ?", new String[] {"500"});
             }
         });
         Button queryButton = (Button) findViewById(R.id.query_data);
