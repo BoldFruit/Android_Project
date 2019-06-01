@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 
-public class MineActivity extends AppCompatActivity implements View.OnClickListener {
+public class MineActivity extends AppCompatActivity  {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -14,6 +14,6 @@ public class MineActivity extends AppCompatActivity implements View.OnClickListe
         LinearLayout personalData = (LinearLayout) findViewById(R.id.personal_data);
         LinearLayout myStore = (LinearLayout) findViewById(R.id.my_store);
         LinearLayout myMenu = (LinearLayout) findViewById(R.id.my_menu);
-        LinearLayout myCollection = (LinearLayout) findViewById(R.id.)
+        LinearLayout myCollection = (LinearLayout) findViewById(R.id.my_collection);
     }
 }

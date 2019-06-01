@@ -28,17 +28,18 @@
             android:src="@drawable/personal_data"
             />
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="match_parent"
             android:text="个人资料"
             android:layout_marginLeft="15dp"
             />
         <ImageView
-            android:layout_width="0dp"
+            android:layout_width="20dp"
             android:layout_height="20dp"
-            android:layout_gravity="right"
             android:src="@drawable/right_arrows"/>
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -52,17 +53,18 @@
             android:src="@drawable/mystore"
             />
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="match_parent"
             android:text="我的小店"
             android:layout_marginLeft="15dp"
             />
         <ImageView
-            android:layout_width="0dp"
+            android:layout_width="20dp"
             android:layout_height="20dp"
-            android:layout_gravity="right"
             android:src="@drawable/right_arrows"/>
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -76,15 +78,15 @@
             android:src="@drawable/my_menu"
             />
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="match_parent"
             android:text="我的订单"
             android:layout_marginLeft="15dp"
             />
         <ImageView
-            android:layout_width="0dp"
+            android:layout_width="20dp"
             android:layout_height="20dp"
-            android:layout_gravity="right"
             android:src="@drawable/right_arrows"/>
     </LinearLayout>
 
@@ -92,6 +94,7 @@
         android:layout_width="match_parent"
         android:layout_height="5dp"
         android:background="@color/gray"/>
+
     <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -105,17 +108,18 @@
         android:src="@drawable/my_collection"
         />
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="1"
         android:layout_height="match_parent"
         android:text="我的收藏"
         android:layout_marginLeft="15dp"
         />
     <ImageView
-        android:layout_width="0dp"
+        android:layout_width="20dp"
         android:layout_height="20dp"
-        android:layout_gravity="right"
         android:src="@drawable/right_arrows"/>
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -129,15 +133,15 @@
             android:src="@drawable/setting"
             />
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="match_parent"
             android:text="设置"
             android:layout_marginLeft="15dp"
             />
         <ImageView
-            android:layout_width="0dp"
+            android:layout_width="20dp"
             android:layout_height="20dp"
-            android:layout_gravity="right"
             android:src="@drawable/right_arrows"/>
     </LinearLayout>
     <com.example.rebuy.MenuLayout
