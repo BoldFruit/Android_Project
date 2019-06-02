@@ -22,7 +22,9 @@
         <activity android:name=".InformationAcitivity" />
         <activity android:name=".AuctionActivity" />
         <activity android:name=".MessageActivity" />
-        <activity android:name=".MineActivity"></activity>
+        <activity android:name=".MineActivity" />
+        <activity android:name=".FirstpageActivity" />
+        <activity android:name=".DetailActivity"></activity>
     </application>
 
 </manifest>

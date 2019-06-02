@@ -4,6 +4,20 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/transparency_50"
+        android:gravity="center"
+        android:padding="20dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            />
+
+    </RelativeLayout>
 
     <TextView
         android:layout_width="match_parent"
@@ -144,8 +158,5 @@
             android:layout_height="20dp"
             android:src="@drawable/right_arrows"/>
     </LinearLayout>
-    <com.example.rebuy.MenuLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </com.example.rebuy.MenuLayout>
+
 </LinearLayout>
