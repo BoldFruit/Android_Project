@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_marginBottom="10dp">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/white_girl"
+        android:id="@+id/white_girl"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/white_girl"
+        android:text="淑女学生蕾丝连衣裙，修身甜美小清新"
+        android:layout_margin="10dp"
+        android:id="@+id/whitegirl_title"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/whitegirl_title"
+        android:layout_alignLeft="@id/whitegirl_title"
+        android:id="@+id/speciality"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/isAuction"
+            android:text="拍卖品"
+            android:textColor="@color/white"
+            android:background="@color/green"
+            android:layout_margin="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/isExchangable"
+            android:text="物换物"
+            android:textColor="@color/white"
+            android:background="@color/blue"
+            android:layout_margin="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/isNoBargain"
+            android:text="一口价"
+            android:textColor="@color/white"
+            android:background="@color/red"
+            android:layout_margin="5dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¥ 100000"
+        android:layout_below="@+id/speciality"
+        android:layout_alignLeft="@+id/speciality"
+        android:textColor="@color/red"
+        android:textSize="20sp"
+        android:id="@+id/price"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/price"
+        android:layout_alignLeft="@+id/price"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="已完成"
+            android:layout_marginLeft="10dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

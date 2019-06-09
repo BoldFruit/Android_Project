@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.example.rebuy.ReturnTitleLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.example.rebuy.ReturnTitleLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/tv_1"
+            android:text="未完成"
+            android:gravity="center"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/tv_2"
+            android:text="已完成"
+            android:gravity="center"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_weight="1"
+            android:background="@color/blue"
+            android:id="@+id/v1"
+            android:visibility="visible"
+            />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_weight="1"
+            android:background="@color/blue"
+            android:id="@+id/v2"
+            android:visibility="invisible"
+            />
+        </LinearLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vpager_myorder"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1.0"
+        />
+
+</LinearLayout>

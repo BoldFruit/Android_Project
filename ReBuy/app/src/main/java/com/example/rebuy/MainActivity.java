@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
                 break;
             case MINE:
                 TextView text3 = (TextView) findViewById(R.id.mine_text);
-                ImageView img3 = (ImageView) findViewById(R.id.mine_icon);
+                ImageView img3 = (ImageView) findViewById(R.id.mine_icon1);
                 text3.setTextColor(getResources().getColor(R.color.gray));
                 img3.setImageResource(R.drawable.mine);
                 break;
@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
                 break;
             case MINE:
                 TextView text3 = (TextView) findViewById(R.id.mine_text);
-                ImageView img3 = (ImageView) findViewById(R.id.mine_icon);
+                ImageView img3 = (ImageView) findViewById(R.id.mine_icon1);
                 text3.setTextColor(getResources().getColor(R.color.blue));
                 img3.setImageResource(R.drawable.mine_fill);
                 break;

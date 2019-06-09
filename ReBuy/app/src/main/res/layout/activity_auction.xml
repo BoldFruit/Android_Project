@@ -13,6 +13,15 @@
         android:textSize="20sp"
         android:padding="5sp"
         android:textColor="#ffffff"/>
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/auction_recyclerview"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"/>
+    </android.support.v4.widget.SwipeRefreshLayout>
 
 </LinearLayout>

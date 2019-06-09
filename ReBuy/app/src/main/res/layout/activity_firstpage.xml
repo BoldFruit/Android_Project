@@ -91,7 +91,9 @@
             android:layout_weight="1"
             android:orientation="horizontal"
             android:gravity="center"
-            android:padding="10dp">
+            android:padding="10dp"
+            android:id="@+id/go_shopping"
+            >
 
             <ImageView
                 android:layout_width="20dp"
@@ -117,8 +119,8 @@
             android:layout_weight="1"
             android:orientation="horizontal"
             android:gravity="center"
-            android:padding="10dp">
-
+            android:padding="10dp"
+            android:id="@+id/publish_message">
             <ImageView
                 android:layout_width="20dp"
                 android:layout_height="20dp"
@@ -221,7 +223,7 @@
                     android:layout_alignTop="@id/sale"
                     android:layout_toRightOf="@id/sale"
                     android:layout_toEndOf="@id/sale"
-                     />
+                    />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -287,7 +289,7 @@
             android:textSize="15dp"
             android:text="猜你喜欢"/>
     </LinearLayout>
-
+    
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_firstpage"
         android:layout_width="match_parent"

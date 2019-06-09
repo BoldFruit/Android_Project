@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_marginBottom="10dp">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/white_girl3"
+        android:id="@+id/white_girl"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/white_girl"
+        android:text="淑女学生蕾丝连衣裙，修身甜美小清新"
+        android:layout_margin="10dp"
+        android:id="@+id/whitegirl_title"
+        android:textSize="18sp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¥ 100000"
+        android:layout_below="@+id/whitegirl_title"
+        android:layout_alignLeft="@+id/whitegirl_title"
+        android:textColor="@color/red"
+        android:textSize="20sp"
+        android:id="@+id/price"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/price"
+        android:layout_alignLeft="@+id/price"
+        android:orientation="vertical"
+        android:layout_marginTop="15dp"
+        >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="截止时间：2016.09.04"
+            android:layout_marginBottom="5dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="参与人数：10"
+            android:id="@+id/person"
+            />
+
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/islove"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/love"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="105dp"/>
+</RelativeLayout>

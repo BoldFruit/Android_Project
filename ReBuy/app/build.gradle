@@ -5,7 +5,7 @@ android {
     buildToolsVersion "28.0.3"
     defaultConfig {
         applicationId "com.example.rebuy"
-        minSdkVersion 15
+        minSdkVersion 17
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
@@ -28,4 +28,6 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'org.litepal.android:core:1.4.1'
     compile 'com.android.support:recyclerview-v7:26+'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'com.android.support:design:26+'
 }

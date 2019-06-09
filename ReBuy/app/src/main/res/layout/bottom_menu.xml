@@ -97,7 +97,7 @@
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:src="@drawable/mine"
-                android:id="@+id/mine_icon"
+                android:id="@+id/mine_icon1"
                 android:layout_gravity="center_horizontal"
                 />
             <TextView

@@ -4,21 +4,6 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     >
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:background="@color/transparency_50"
-        android:gravity="center"
-        android:padding="20dp">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            />
-
-    </RelativeLayout>
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -28,7 +13,43 @@
         android:textSize="20sp"
         android:padding="5sp"
         android:textColor="#ffffff"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/red_girl"
+        android:gravity="center"
+        android:padding="20dp">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:src="@drawable/red_girl"
+            android:id="@+id/mine_icon"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/mine_icon"
+            android:text="大果子"
+            android:textSize="20sp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignTop="@id/mine_icon"
+            android:id="@+id/mine_name"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mine_name"
+            android:layout_alignStart="@+id/mine_name"
+            android:text="大果子大果子爱吃鱼，这是一条很有个性的个性签名"
+            android:textSize="14sp"
+            android:layout_marginTop="10dp"/>
+
+
+    </RelativeLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

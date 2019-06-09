@@ -11,20 +11,26 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity android:name=".LoginActivity">
+        </activity>
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".DetailActivity" />
+        <activity android:name=".MyStoreActivity" />
+        <activity android:name=".MyOrderActivity" />
+        <activity android:name=".MessageDetailActivity" />
+        <activity android:name=".ShoppingActivity" />
+        <activity android:name=".PersonalData" />
+        <activity android:name=".MyCollection" />
+        <activity android:name=".Setting" />
+        <activity android:name=".InformationPublishActivity"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RegisterActivity" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".InformationAcitivity" />
-        <activity android:name=".AuctionActivity" />
-        <activity android:name=".MessageActivity" />
-        <activity android:name=".MineActivity" />
-        <activity android:name=".FirstpageActivity" />
-        <activity android:name=".DetailActivity"></activity>
     </application>
 
 </manifest>

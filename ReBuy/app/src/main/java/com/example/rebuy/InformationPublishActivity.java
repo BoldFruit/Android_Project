@@ -4,13 +4,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
-public class DetailActivity extends AppCompatActivity {
+public class InformationPublishActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detail);
-        TextView libel = (TextView)findViewById(R.id.lible);
-        libel.setText("商品详情");
+        setContentView(R.layout.activity_information_publish);
+        TextView libel = (TextView) findViewById(R.id.lible);
+        libel.setText("发布信息");
     }
 }
