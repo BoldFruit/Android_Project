@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class MessageDetailActivity extends AppCompatActivity {
+public class MessageDetailActivity extends BaseActivity {
 
     public static void actionStart(Context context,int ImageId, String name, String time){
         Intent intent = new Intent(context, MessageDetailActivity.class);

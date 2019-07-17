@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v4.app.Fragment;
+import android.support.v4.media.MediaMetadataCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
@@ -20,6 +21,8 @@ import java.util.List;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
+
+import static android.support.v7.recyclerview.R.styleable.RecyclerView;
 
 /**
  * Created by dell on 2019/6/1.
@@ -43,7 +46,14 @@ public class FirstpageFragment extends Fragment {
         View view = inflater.inflate(R.layout.activity_firstpage, container, false);
         initRecycler();
         RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recycler_firstpage);
-        StaggeredGridLayoutManager layoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
+        recyclerView.setFocusableInTouchMode(false);
+        StaggeredGridLayoutManager layoutManager;
+        layoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL){
+            @Override
+            public boolean canScrollVertically(){
+                return false;
+            }
+        };
         recyclerView.setLayoutManager(layoutManager);
         FirstpageClothesAdapter adapter = new FirstpageClothesAdapter(firstpageClothesList);
         recyclerView.setAdapter(adapter);

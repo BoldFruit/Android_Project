@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class MyCollection extends AppCompatActivity {
+public class MyCollection extends BaseActivity {
     private RecyclerView recyclerView ;
     private AuctionAdapter adapter;
     private List<AuctionCloth> mClothList;

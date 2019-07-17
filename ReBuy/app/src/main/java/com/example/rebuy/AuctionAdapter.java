@@ -4,6 +4,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.provider.ContactsContract;
+import android.support.annotation.BoolRes;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,18 +21,18 @@ import java.util.List;
 public class AuctionAdapter extends RecyclerView.Adapter<AuctionAdapter.ViewHolder> {
     private Context mcontext;
     private List<AuctionCloth> mClothList;
-    private boolean islove = false;
-
     static class ViewHolder extends RecyclerView.ViewHolder{
         ImageView isLove;
         TextView person;
         TextView price;
+        View v;
 
         public ViewHolder(View v){
             super(v);
             isLove = (ImageView) v.findViewById(R.id.islove);
             person = (TextView) v.findViewById(R.id.person);
             price = (TextView) v.findViewById(R.id.price);
+            this.v =v;
         }
     }
 
@@ -46,7 +47,7 @@ public class AuctionAdapter extends RecyclerView.Adapter<AuctionAdapter.ViewHold
         }
         View view= LayoutInflater.from(mcontext).inflate(R.layout.auction_item, parent, false);
         final ViewHolder viewHolder = new ViewHolder(view);
-        view.setOnClickListener(new View.OnClickListener(){
+        viewHolder.v.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 Intent intent = new Intent(v.getContext(),DetailActivity.class);
@@ -54,23 +55,30 @@ public class AuctionAdapter extends RecyclerView.Adapter<AuctionAdapter.ViewHold
             }
         });
         viewHolder.isLove.setOnClickListener(new View.OnClickListener(){
-            @Override
             public void onClick(View v){
-                if(viewHolder.isLove.getImageAlpha() == R.drawable.love){
+                int position = viewHolder.getAdapterPosition();
+                AuctionCloth cloth = mClothList.get(position);
+                if(!cloth.isLove){
+                    cloth.setLove(true);
                     viewHolder.isLove.setImageResource(R.drawable.love_fill);
                 }else{
-                    viewHolder.isLove.setImageResource(R.drawable.love);
-                }
+                    cloth.setLove(false);
+                    viewHolder.isLove.setImageResource(R.drawable.love);}
             }
         });
         return viewHolder;
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position){
+    public void onBindViewHolder(final ViewHolder holder, int position){
         AuctionCloth cloth = mClothList.get(position);
         holder.price.setText("$"+cloth.getPrice());
         holder.person.setText("参与人数:"+cloth.getPerson());
+        if(!cloth.isLove){
+            holder.isLove.setImageResource(R.drawable.love);
+        }else{
+            holder.isLove.setImageResource(R.drawable.love_fill);
+        }
     }
 
     @Override

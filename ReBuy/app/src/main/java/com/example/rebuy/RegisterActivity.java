@@ -11,8 +11,10 @@ import android.widget.Toast;
 import org.litepal.crud.DataSupport;
 
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
-public class RegisterActivity extends AppCompatActivity implements View.OnClickListener{
+public class RegisterActivity extends BaseActivity implements View.OnClickListener{
 
     private EditText hostname;
     private EditText password;
@@ -30,33 +32,41 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         comfirm_register.setOnClickListener(this);
     }
     @Override
-    public void onClick(View v){
-        if(v.getId() == R.id.cancel_action){
+    public void onClick(View v) {
+        if (v.getId() == R.id.cancel_action) {
             Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
             startActivity(intent);
         }
-        if(v.getId() == R.id.comfirm_register){
+        if (v.getId() == R.id.comfirm_register) {
             String inputHostname = hostname.getText().toString();
             String inputPassword = password.getText().toString();
             String inputComfirmPassword = comfirmPassword.getText().toString();
-            List<User> users = DataSupport.select("hostname").where("hostname = ?",inputHostname).find(User.class);
-            if(users.isEmpty()){
-                if(inputPassword.equals(inputComfirmPassword)){
-                    User user = new User();
-                    user.setHostname(inputHostname);
-                    user.setPassword(inputPassword);
-                    user.setRememberPassword(false);
-                    user.save();
-                    Toast.makeText(this,"注册成功",Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(this,LoginActivity.class);
-                    startActivity(intent);
-                }else{
-                    Toast.makeText(this,"密码不一致",Toast.LENGTH_SHORT).show();
+            List<User> users = DataSupport.select("hostname").where("hostname = ?", inputHostname).find(User.class);
+            Pattern pattern = Pattern.compile("[0-9a-zA-Z]+");
+            Matcher matcher1 = pattern.matcher(inputHostname);
+            Matcher matcher2 = pattern.matcher(inputPassword);
+            Matcher matcher3 = pattern.matcher(inputComfirmPassword);
+            if(matcher1.matches() && matcher2.matches() && matcher3.matches()){
+                if (users.isEmpty()) {
+                    if (inputPassword.equals(inputComfirmPassword)) {
+                        User user = new User();
+                        user.setHostname(inputHostname);
+                        user.setPassword(inputPassword);
+                        user.setRememberPassword(false);
+                        user.save();
+                        Toast.makeText(this, "注册成功", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(this, MainActivity.class);
+                        startActivity(intent);
+                    } else {
+                        Toast.makeText(this, "密码不一致", Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+                    Toast.makeText(this, "该用户名已被注册", Toast.LENGTH_SHORT).show();
                 }
             }else{
-                Toast.makeText(this,"该用户名已被注册",Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "请完善你的信息", Toast.LENGTH_SHORT).show();
             }
-
         }
+
     }
 }

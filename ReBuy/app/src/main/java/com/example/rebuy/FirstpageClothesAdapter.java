@@ -13,6 +13,7 @@ import java.util.List;
 import static android.R.attr.codes;
 import static android.R.attr.onClick;
 import static android.R.attr.targetActivity;
+import static android.support.v7.recyclerview.R.styleable.RecyclerView;
 
 /**
  * Created by dell on 2019/6/2.
@@ -82,7 +83,7 @@ public class FirstpageClothesAdapter extends RecyclerView.Adapter<FirstpageCloth
         if(clothes.getNoBargain()){
             holder.isNoBargain.setVisibility(View.VISIBLE);
         }
-        holder.price.setText(String.valueOf(clothes.getPrice()));
+        holder.price.setText("¥" + String.valueOf(clothes.getPrice()));
     }
 
     @Override

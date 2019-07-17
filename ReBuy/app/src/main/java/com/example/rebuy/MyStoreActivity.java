@@ -1,5 +1,6 @@
 package com.example.rebuy;
 
+import android.graphics.Typeface;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,7 +14,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class MyStoreActivity extends AppCompatActivity implements View.OnClickListener, ViewPager.OnPageChangeListener{
+public class MyStoreActivity extends BaseActivity implements View.OnClickListener, ViewPager.OnPageChangeListener{
     private ViewPager vpager;
     private TextView tv_one;
     private TextView tv_two;
@@ -26,6 +27,7 @@ public class MyStoreActivity extends AppCompatActivity implements View.OnClickLi
         setContentView(R.layout.activity_my_store);
         initViews();
         TextView libel = (TextView) findViewById(R.id.lible);
+
         libel.setText("我的小店");
     }
 
@@ -45,18 +47,16 @@ public class MyStoreActivity extends AppCompatActivity implements View.OnClickLi
         }
     @Override
     public void onClick(View v){
-        TextPaint tp1 = tv_one.getPaint();
-        TextPaint tp2 = tv_two.getPaint();
         switch (v.getId()){
             case R.id.tv_1:
                 vpager.setCurrentItem(0);
-                tp1.setFakeBoldText(true);
-                tp2.setFakeBoldText(false);
+                tv_one .setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
+                tv_two .setTypeface(Typeface.defaultFromStyle(Typeface.NORMAL));
                 break;
             case R.id.tv_2:
                 vpager.setCurrentItem(1);
-                tp1.setFakeBoldText(false);
-                tp2.setFakeBoldText(true);
+                tv_one.setTypeface(Typeface.defaultFromStyle(Typeface.NORMAL));
+                tv_two.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
                 break;
         }
     }
@@ -65,10 +65,15 @@ public class MyStoreActivity extends AppCompatActivity implements View.OnClickLi
     public void onPageSelected(int index) {
         switch(index){
             case 0:
+                tv_one .setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
+                tv_two .setTypeface(Typeface.defaultFromStyle(Typeface.NORMAL));
                 v1.setVisibility(View.VISIBLE);
                 v2.setVisibility(View.INVISIBLE);
+
                 break;
             case 1:
+                tv_one.setTypeface(Typeface.defaultFromStyle(Typeface.NORMAL));
+                tv_two.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
                 v1.setVisibility(View.INVISIBLE);
                 v2.setVisibility(View.VISIBLE);
         }

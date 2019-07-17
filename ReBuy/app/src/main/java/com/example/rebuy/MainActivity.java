@@ -18,7 +18,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
-public class MainActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener,View.OnClickListener {
+public class MainActivity extends BaseActivity implements ViewPager.OnPageChangeListener,View.OnClickListener {
     public static final int FIRSTPAGE = 0;
     public static final int AUCTION = 1;
     public static final int MESSAGE = 2;
@@ -54,6 +54,11 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
 
     @Override
     public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+    }
+
+    @Override
+    public void onPageSelected(int position) {
         switch (lastPosition){
             case FIRSTPAGE:
                 TextView text = (TextView) findViewById(R.id.firstpage_text);
@@ -111,10 +116,6 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
                 break;
         }
         lastPosition = position;
-    }
-
-    @Override
-    public void onPageSelected(int position) {
     }
 
     @Override

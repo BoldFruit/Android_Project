@@ -4,7 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
-public class InformationPublishActivity extends AppCompatActivity {
+public class InformationPublishActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

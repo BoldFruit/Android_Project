@@ -54,6 +54,7 @@
             android:layout_weight="1"
             android:id="@+id/password"
             android:hint="请输入密码"
+            android:inputType="textPassword"
             android:maxLines="1"
             />
     </LinearLayout>

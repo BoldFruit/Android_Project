@@ -14,7 +14,8 @@
         android:layout_width="match_parent"
         android:layout_height="129dp"
         android:src="@drawable/poster"
-        android:scaleType="centerCrop"/>
+        android:scaleType="centerCrop"
+        android:id="@+id/poster"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -39,6 +40,7 @@
             android:layout_height="40dp"
             android:src="@drawable/love"
             android:layout_marginLeft="5dp"
+            android:id="@+id/islove"
             />
     </LinearLayout>
     <View

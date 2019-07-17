@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class ShoppingActivity extends AppCompatActivity implements View.OnClickListener {
+public class ShoppingActivity extends BaseActivity implements View.OnClickListener {
 
     private ShoppingAdapter adapter;
     private View v1;

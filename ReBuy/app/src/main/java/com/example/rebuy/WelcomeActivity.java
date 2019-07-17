@@ -7,14 +7,14 @@ import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.widget.ImageView;
 
-public class WelcomeActivity extends AppCompatActivity {
+public class WelcomeActivity extends BaseActivity {
     private ImageView welcomeImg = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
         welcomeImg = (ImageView) findViewById(R.id.welcome_img);
-        AlphaAnimation anima = new AlphaAnimation(0.3f, 1.0f);
+        AlphaAnimation anima = new AlphaAnimation(0f, 1.0f);
         anima.setDuration(3000);
         welcomeImg.startAnimation(anima);
         anima.setAnimationListener(new Animation.AnimationListener() {
